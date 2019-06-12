@@ -33,14 +33,14 @@ process saymerge{
      """
 }
 
-//process bar {
-//  publishDir '/mnt/efs/resultsfinal/'
-// input:
-//  file 'out*' from cheers3.collect()
-//  output:
-//    file 'final.out' into cheers4
-//  """
-//  cat out* >> "final.out" 
-//  """
-//}
+process bar {
+ publishDir '/mnt/efs/resultsfinal/'
+ input:
+  file 'out*' from cheers3.collect()
+  output:
+    file 'final.out' into cheers4
+  """
+  cat out* >> "final.out" 
+  """
+}
 
